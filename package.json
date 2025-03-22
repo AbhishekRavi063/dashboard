@@ -5,6 +5,7 @@
   "dependencies": {
     "@canvasjs/charts": "^3.12.5",
     "@canvasjs/react-charts": "^1.0.2",
+    "@nivo/sankey": "^0.88.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",

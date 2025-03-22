@@ -4,6 +4,7 @@ import TopMenu from "./components/TopMenu";
 import Card from "./components/Card";
 import Graph from "./components/Graph";
 import "./App.css";
+import PortfolioComposition from "./components/PortfolioComposition";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState("Performance Metrics");
@@ -57,8 +58,8 @@ const App = () => {
           </div>
 
           {/* Graph (or other components based on the selected tab) */}
-          <div className="flex-1">
-            {activeTab === "Performance Metrics" ? <Graph /> : <p className="text-gray-400">Portfolio Composition Data</p>}
+          <div className="flex-1 ">
+            {activeTab === "Performance Metrics" ? <Graph /> : <PortfolioComposition />}
           </div>
         </div>
       </div>
