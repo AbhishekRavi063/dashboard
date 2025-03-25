@@ -43,7 +43,7 @@ const App = () => {
           </div>
 
           {/* Tabs */}
-          <div className="flex space-x-6 mb-4 border-b border-gray-600">
+          <div className="flex space-x-80 mb-4 border-b border-gray-600">
             {["Performance Metrics", "Portfolio Composition"].map((tab) => (
               <button
                 key={tab}
@@ -58,7 +58,7 @@ const App = () => {
           </div>
 
           {/* Graph (or other components based on the selected tab) */}
-          <div className="flex-1 ">
+          <div className="flex-1  ">
             {activeTab === "Performance Metrics" ? <Graph /> : <PortfolioComposition />}
           </div>
         </div>

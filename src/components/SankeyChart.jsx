@@ -2,6 +2,7 @@
 
 import { ResponsiveSankey } from "@nivo/sankey";
 import { useRef, useState } from "react";
+import '../../src/index.css'
 
 const data = {
   nodes: [
@@ -136,25 +137,25 @@ const SankeyChart = () => {
 
 
   return (
-    <div className="relative w-full h-[500px] p-6 rounded-lg mt-4 shadow-md" style={{ background: "transparent" }}>
+    <div className="relative w-[1300px] h-[550px] p-6 rounded-lg mt-4 shadow-md" style={{ background: "transparent" }}>
       <div className="w-full h-full relative">
         <ResponsiveSankey
           data={data}
-          margin={{ top: 20, right: 200, bottom: 20, left: 200 }}
+          margin={{ top: 30, right: 200, bottom: 20, left: 140 }}
           align="justify"
           colors={{ datum: "color" }}
           nodeOpacity={1}
-          nodeThickness={16}
+          nodeThickness={14}
           nodeBorderWidth={1}
           nodeBorderRadius={8}
           nodeHoverOpacity={1}
           nodeHoverOthersOpacity={0.3}
           linkOpacity={0.8}  // Increase default opacity
-          linkHoverOpacity={0.9}
-          linkHoverOthersOpacity={0.5}
+          linkHoverOpacity={5}
+          linkHoverOthersOpacity={0.3}
           enableLinkGradient={false}
           linkBlendMode="multiply"
-          linkColor={(link) => "#A9A9A9"}  // Set default link color to gray
+          linkColor={"white"}  // Set default link color to gray
           linkHoverColor={(link) => link.source.color}  // Change link color on hover to source node's color
           labelPosition="outside"
           labelPadding={12}
@@ -193,11 +194,11 @@ const SankeyChart = () => {
           .map((node) => (
             <div
               key={node.id}
-              className="absolute px-3 py-2 rounded-lg text-white text-xs font-semibold shadow-lg w-[120px] h-[20px] flex flex-col items-center justify-center text-center"
+              className="absolute px-2 py-4 rounded-lg text-white text-xs font-semibold shadow-lg w-[120px] h-[20px] flex flex-col items-center justify-center text-center"
               style={{
                 backgroundColor: `${node.color}80`,
-                top: `${node.y - -88}px`,
-                left: `${node.x - -80}px`,
+                top: `${node.y - -120}px`,
+                left: `${node.x - 0}px`,
                 transform: "translateY(-50%)",
                 lineHeight: "1.2",
                 opacity: hoveredNode ? (hoveredNode === node.id ? 1 : 0.3) : 1,
