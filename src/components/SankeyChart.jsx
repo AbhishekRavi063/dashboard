@@ -197,7 +197,7 @@ const SankeyChart = () => {
               className="absolute px-2 py-4 rounded-lg text-white text-xs font-semibold shadow-lg w-[120px] h-[20px] flex flex-col items-center justify-center text-center"
               style={{
                 backgroundColor: `${node.color}80`,
-                top: `${node.y - -120}px`,
+                top: `${node.y - -100}px`,
                 left: `${node.x - 0}px`,
                 transform: "translateY(-50%)",
                 lineHeight: "1.2",
