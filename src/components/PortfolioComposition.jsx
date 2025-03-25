@@ -6,9 +6,7 @@ const PortfolioComposition = () => {
 
   return (
     <div
-      className="p-6 text-white rounded-lg"
-      style={{ backgroundColor: "#121212" }}
-    >
+      className="p-6 text-white rounded-lg">
       {/* Sector Allocation */}
       <div className="mt-6 bg-[#1E1E1E] p-6 rounded-lg">
       <h3 className={`text-lg font-semibold transition-colors duration-300 ${hovered ? "text-[#0a3561]" : "text-white"}`}>
@@ -139,7 +137,7 @@ const PortfolioComposition = () => {
         </ul>
 
         {/* Sankey Chart */}
-        <div className="p-8 min-h-screen">
+        <div className="p-8 ">
           <SankeyChart />
         </div>
       </div>
